@@ -37,10 +37,10 @@ This project automates the process of scanning **IP addresses**, **URLs**, **dom
 
 - Python 3.7+
 - Install dependencies:
-pycountry
-pandas
-openpyxl
-requests
+``pycountry``
+``pandas``
+``openpyxl``
+``requests``
   
 ## 🚀 How to Use
 
@@ -49,15 +49,15 @@ requests
 - Paste your IOCs into their respective sheets:
 - **IP** → for IP addresses
 - **URL/Domain** → for domains and URLs
-- **Hash** → for SHA1/SHA256/MD5
+- **Hash** → for SHA1/SHA256
 
 ## Run the Script
 
 **bash** / **cmd or powershell**
-- python.exe main.py -o <output_file>.xlsx
-- python.exe main.py --output <output_file>.xlsx
+- ``python.exe main.py -o <output_file>.xlsx``
+- ``python.exe main.py --output <output_file>.xlsx``
 
-If <output_file> already exists, the program will update only the specified sheet(s), avoiding full overwrite.
+If ``<output_file>`` already exists, the program will update only the specified sheet(s), avoiding full overwrite.
 
 ## 📦 Output
 - Results are written to specific sheets inside the output Excel workbook.
