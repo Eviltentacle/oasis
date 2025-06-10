@@ -1,4 +1,4 @@
-# OASIS [ One America Service Information Sharing ]
+# OASIS
 
 
 # IOC Vetting Automation Tool
