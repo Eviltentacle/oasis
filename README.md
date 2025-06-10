@@ -21,13 +21,13 @@ This project automates the process of scanning **IP addresses**, **URLs**, **dom
 
 1. **Clone the repository**
 
-**Linux**
+Linux
 ```bash
 git clone https://github.com/yourusername/oasis.git
 cd oasis
 pip install -r requirements.txt
 
-**Windows**
+Windows
 ```cmd/powershell
 open git
 git clone https://github.com/yourusername/oasis.git
