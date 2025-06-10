@@ -45,7 +45,7 @@ requests
 ## 🚀 How to Use
 
 - Prepare Your Input
-- Use the provided ioc_vetting.xlsx template.
+- Use the provided ``ioc_vetting.xlsx`` template.
 - Paste your IOCs into their respective sheets:
 - **IP** → for IP addresses
 - **URL/Domain** → for domains and URLs
