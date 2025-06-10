@@ -1,0 +1,4 @@
+pycountry
+pandas
+openpyxl
+requests
