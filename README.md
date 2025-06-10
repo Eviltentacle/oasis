@@ -11,7 +11,7 @@ This project automates the process of scanning **IP addresses**, **URLs**, **dom
 
 - ✅ Scans IPs, URLs/domains, and Hashes. #Email Address will be added soon
 - ✅ Extracts IOCS and checks them via VirusTotal.
-- ✅ Outputs results into a designated Excel sheet (e.g., `IP`, `URL`, `Domain`, Hashes) without affecting other sheets.
+- ✅ Outputs results into a designated Excel sheet (e.g., `IP`, `URL`, `Domain`, `Hashes` ) without affecting other sheets.
 - ✅ Multithreaded scanning for better performance.
 - ✅ Avoid overwriting and creates output file if it exist.
 - ✅ Supports resuming and updating existing workbooks.
@@ -46,10 +46,10 @@ requests
 
 - Prepare Your Input
 - Use the provided ioc_vetting.xlsx template.
-- Paste your IOCs into their respective sheets: 
-**IP** → for IP addresses
-**URL** → for domains and URLs
-**Hash** → for SHA1/SHA256/MD5
+- Paste your IOCs into their respective sheets:
+- **IP** → for IP addresses
+- **URL/Domain** → for domains and URLs
+- **Hash** → for SHA1/SHA256/MD5
 
 ## Run the Script
 
