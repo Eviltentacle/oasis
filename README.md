@@ -1,9 +1,9 @@
-# oasis
+# OASIS [ One America Service Information Sharing ]
 
 
 # IOC Vetting Automation Tool
 
-This project automates the process of scanning **IP addresses**, **URLs**, **domains**, and **Hashes** in **VirusTotal**, then logs the results into an Excel workbook (`.xlsx`). The tool is designed to avoid overwriting sheets and is ideal for analysts, threat hunters, and SOC teams.
+This project automates the process of scanning **IP addresses**, **URLs**, **domains**, and **Hashes** in **VirusTotal**, then logs the results into an Excel workbook (`.xlsx`). The tool is designed for automated triage of IOC then imported on sheets. Ideal for security analysts, threat hunters, and SOC teams.
 
 ---
 
@@ -21,24 +21,17 @@ This project automates the process of scanning **IP addresses**, **URLs**, **dom
 
 1. **Clone the repository**
 
-Linux
-```bash
-git clone https://github.com/yourusername/oasis.git
-cd oasis
-pip install -r requirements.txt
+**Linux**
+- git clone https://github.com/Eviltentacle/oasis.git
+- cd oasis
+- pip install -r requirements.txt
 
-Windows
-```cmd/powershell
-open git
-git clone https://github.com/yourusername/oasis.git
-cd oasis
-pip install -r requirements.txt
+**Windows**
+- open git
+- git clone https://github.com/Eviltentacle/oasis.git
+- cd oasis
+- pip install -r requirements.txt
 
-or
-
-download the zip file in github and extract
-cd oasis
-pip install -r requirements.txt
 
 ## 📦 Requirements
 
@@ -49,7 +42,27 @@ pandas
 openpyxl
 requests
   
+## 🚀 How to Use
 
+- Prepare Your Input
+- Use the provided ioc_vetting.xlsx template.
+- Paste your IOCs into their respective sheets: 
+**IP** → for IP addresses
+**URL** → for domains and URLs
+**Hash** → for SHA1/SHA256/MD5
+
+## Run the Script
+
+**bash** / **cmd or powershell**
+- python.exe main.py -o <output_file>.xlsx
+- python.exe main.py --output <output_file>.xlsx
+
+If <output_file> already exists, the program will update only the specified sheet(s), avoiding full overwrite.
+
+## 📦 Output
+- Results are written to specific sheets inside the output Excel workbook.
+- Each IOC category gets updated in its own sheet (e.g., IP, URL, Email, Hash).
+- Results include VT detection score, geoblock status (if applicable), and metadata like ASN, country name, etc.
 
 
 # 🧾 Version Changelog
