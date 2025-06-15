@@ -7,7 +7,7 @@ import scan_ip
 import scan_domain
 import scan_hash
 import scan_url
-import scan_email
+#import scan_email
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
