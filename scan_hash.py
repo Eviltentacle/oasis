@@ -34,7 +34,7 @@ def check_hash(hash_value):
     }
 
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, verify=False)
 
         if response.status_code == 404:
             # Hash not found in VT
