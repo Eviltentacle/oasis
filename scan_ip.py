@@ -72,7 +72,7 @@ def load_geoblocked_countries():
 def check_ip(ip_address, geoblocked_countries):
     url = f'https://www.virustotal.com/api/v3/ip_addresses/{ip_address}'
     headers = {'x-apikey': API_KEY}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, verify=False)
     if response.status_code != 200:
         raise requests.exceptions.RequestException(f"API error: {response.status_code} for IP {ip_address}")
     data = response.json()['data']['attributes']
