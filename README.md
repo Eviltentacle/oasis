@@ -27,9 +27,8 @@ This project automates the process of scanning **IP addresses**, **URLs**, **dom
 - pip install -r requirements.txt
 
 **Windows**
-- open git
-- git clone https://github.com/Eviltentacle/oasis.git
-- cd oasis
+- Download Zip and Extract
+- cd oasis-main
 - pip install -r requirements.txt
 
 
