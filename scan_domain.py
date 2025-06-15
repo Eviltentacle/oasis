@@ -24,7 +24,7 @@ def check_input(value):
         if is_url:
             url_id = base64.urlsafe_b64encode(value.encode()).decode().strip("=")
             endpoint = f"{vt_base_url}/urls/{url_id}"
-            response = requests.get(endpoint, headers=headers)
+            response = requests.get(endpoint, headers=headers, verify=False)
             if response.status_code == 404:
                 return [value, "Not found", ""]
             response.raise_for_status()
