@@ -23,7 +23,7 @@ def print_oasis_banner():
        ███    ███   ███    ███    ▄█    ███ ███     ▄█    ███
        ▀██████▀    ███    █▀   ▄████████▀  █▀    ▄████████▀  
                                                            
-           [  One America Service Information Sharing   ]                                                 
+           [  One America Security Intelligence Scanner   ]                                                 
                                                         """
     print(banner)
 def show_menu():
