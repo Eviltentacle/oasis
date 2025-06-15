@@ -41,9 +41,9 @@ def show_menu():
 def run_selection(option):
     if option == "1":
         print("\n[+] Running all IOC scans...\n")
-        scan_ip.main()
         scan_domain.main()
         scan_url.main()
+        scan_ip.main()
         scan_hash.main()
     elif option == "2":
         print("\n[+] Running IP scan...\n")
