@@ -117,7 +117,7 @@ If ``<output_file>`` already exists, the program will update only the specified 
 **Fixes:**
 - Avoids overwriting unrelated sheets during parallel scans
 
-###  v3.1 - Performance & Hash Recognition
+###  v3.1 - Removed Hardcoded API, Email Domain Detection and New Reputation Scan
 
 **Features:**
 - Added email domain detection in email address section
