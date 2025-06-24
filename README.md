@@ -117,6 +117,16 @@ If ``<output_file>`` already exists, the program will update only the specified 
 **Fixes:**
 - Avoids overwriting unrelated sheets during parallel scans
 
+###  v3.1 - Performance & Hash Recognition
+
+**Features:**
+- Added email domain detection in email address section
+- Added .env and removed hardcoded API's
+- Added AbuseIPDB reputation scan
+
+**Fixes:**
+- Unorganized output in IP Address due to parallel scan
+
 ---
 
 ### 🚧 Coming Soon: v4.0
