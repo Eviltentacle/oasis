@@ -10,9 +10,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from openpyxl import load_workbook
 import pandas as pd
 import requests
+from dotenv import load_dotenv
 
-# VirusTotal API Key
-API_KEY = 'YOUR_API'  # <-- Replace with your VirusTotal Premium API key
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
+if not API_KEY:
+    raise ValueError("VirusTotal API key not found. Please set API_KEY in a .env file.")
+
 INPUT_FILE = 'ioc_vetting.xlsx'
 processed_hashes = set()
 
@@ -34,7 +38,7 @@ def check_hash(hash_value):
     }
 
     try:
-        response = requests.get(url, headers=headers, verify=False)
+        response = requests.get(url, headers=headers)
 
         if response.status_code == 404:
             # Hash not found in VT
@@ -125,5 +129,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
