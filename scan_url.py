@@ -9,8 +9,12 @@ import os
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from openpyxl import load_workbook
+from dotenv import load_dotenv
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
+if not API_KEY:
+    raise ValueError("VirusTotal API key not found. Please set API_KEY in a .env file.")
 
-API_KEY = 'YOUR_API'  # <-- Replace with your VirusTotal Premium API key
 INPUT_FILE = 'ioc_vetting.xlsx'
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -24,7 +28,7 @@ def check_input(value):
         if is_url:
             url_id = base64.urlsafe_b64encode(value.encode()).decode().strip("=")
             endpoint = f"{vt_base_url}/urls/{url_id}"
-            response = requests.get(endpoint, headers=headers, verify=False)
+            response = requests.get(endpoint, headers=headers)
             if response.status_code == 404:
                 return [value, "Not found", ""]
             response.raise_for_status()
@@ -94,6 +98,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
